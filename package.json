@@ -1,0 +1,64 @@
+{
+  "name": "bghelper",
+  "version": "0.0.0",
+  "description": "Blue/Green helper for Nginx",
+  "esy": {
+    "build": "dune build -p <PACKAGE_NAME>",
+    "buildDev": "pesy",
+    "release": {
+      "releasedBinaries": [
+        "BghelperApp.exe"
+      ]
+    }
+  },
+  "buildDirs": {
+    "test": {
+      "require": ["bghelper.lib"],
+      "main": "TestBghelper",
+      "name": "TestBghelper.exe"
+    },
+    "library": {
+      "name": "bghelper.lib",
+      "namespace": "Bghelper",
+      "require": [
+        "str",
+        "pastel.lib"
+      ]
+    },
+    "executable": {
+      "require": ["bghelper.lib"],
+      "main": "BghelperApp",
+      "name": "BghelperApp.exe"
+    }
+  },
+  "scripts": {
+    "pesy": "bash -c 'env PESY_MODE=update pesy'",
+    "test": "esy x TestBghelper.exe"
+  },
+  "dependencies": {
+    "@opam/dune": "2.6.2",
+    "@esy-ocaml/reason": "*",
+    "ocaml": "^4.4.0",
+    "@reason-native/pastel": "*"
+  },
+  "devDependencies": {
+    "ocaml": "4.7.1004",
+    "refmterr": "*",
+    "pesy": "*",
+    "@opam/merlin": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kentaromiura/bghelper.git"
+  },
+  "keywords": [
+    "Blue/Green",
+    "nginx"
+  ],
+  "author": "Cristian Carlesso <@kentaromiura> (http://github.com/kentaromiura)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kentaromiura/gbhelper/issues"
+  },
+  "homepage": "https://github.com/kentaromiura/bghelper"
+}
