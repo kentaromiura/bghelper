@@ -38,11 +38,11 @@
   "dependencies": {
     "@opam/dune": "2.6.2",
     "@esy-ocaml/reason": "*",
-    "ocaml": "^4.4.0",
+    "ocaml": "^4.10.0",
     "@reason-native/pastel": "*"
   },
   "devDependencies": {
-    "ocaml": "4.7.1004",
+    "ocaml": "4.10.0",
     "refmterr": "*",
     "pesy": "*",
     "@opam/merlin": "*"
