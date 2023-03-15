@@ -2,6 +2,8 @@
 name = "bghelper"
 version = "2.0.0"
 edition = "2021"
+description = "bgHelper is a simple helper to use with nginx to have a working blue/green deployment."
+license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
