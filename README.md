@@ -40,10 +40,12 @@ V2 expect a simpler configuration, expecting something like
 V2 has therefore dropped the `--servername`, and the `--listen` option.
 V2 added a `--route [-r]` option to define a different route from `/`
 
-** about HTTPS **
+about HTTPS: 
+--
 Given V2 new configuration it's compatible with HTTPS as it is.
 
-** known issues **
+Known issues: 
+--
 V2 version has still 0 unit tests, sorry.
 
 ```
